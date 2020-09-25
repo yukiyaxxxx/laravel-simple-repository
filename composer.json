@@ -8,7 +8,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Yukiyaxxxx\\LaravelSimpleRepository\\Providers\\"
+                "Yukiyaxxxx\\LaravelSimpleRepository\\Providers\\RepositoryServiceProvider"
             ]
         }
     }

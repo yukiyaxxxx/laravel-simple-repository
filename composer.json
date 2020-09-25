@@ -1,0 +1,8 @@
+{
+    "name": "yukiyaxxxx/laravel-simple-repository",
+    "description": "Laravel simple eloquent repository.",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {}
+}

@@ -11,5 +11,10 @@
                 "Yukiyaxxxx\\LaravelSimpleRepository\\Providers\\RepositoryServiceProvider"
             ]
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "Yukiyaxxxx\\LaravelSimpleRepository\\": "src"
+        }
     }
 }

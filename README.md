@@ -5,7 +5,7 @@ Simple repository library on Laravel.
 
 ## Instllation
 
-### Composer install (WIP) 
+### Composer install 
 
 ```
 composer require yukiyaxxxx/laravel-simple-repository

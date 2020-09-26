@@ -4,21 +4,17 @@ namespace Yukiyaxxxx\LaravelSimpleRepository\Eloquent;
 
 abstract class BaseRepository
 {
-
-
     abstract public function model();
 
-    public function newQuery()
+    protected function newQuery()
     {
         return $this->model()->newQuery();
     }
 
-
-    public static function query()
+    protected static function query()
     {
         return (new static)->newQuery();
     }
-
 
     public function find($id, $columns = ['*'])
     {
@@ -87,6 +83,34 @@ abstract class BaseRepository
         return $query->get($columns);
     }
 
+    public function update($model, array $attributes = [], array $options = [])
+    {
+        return $model->update($attributes, $options);
+    }
+
+    public function save($model, array $options = [])
+    {
+        return $model->save($options);
+    }
+
+    public function saveOrFail($model, array $options = [])
+    {
+        return $model->saveOrFail($options);
+    }
+
+    public static function destroy($ids){
+        return static::destroy($ids);
+    }
+
+    public function delete($model)
+    {
+        return $model->delete();
+    }
+
+    public function forceDelete($model)
+    {
+        return $model->forceDelete();
+    }
 
 }
 

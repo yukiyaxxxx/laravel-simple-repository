@@ -43,4 +43,26 @@ $exampleRepository = new ExampleRepository();
 $models =  $exampleRepository->getByEmail($email);
 ```
 
+# API
+
+Extends eloquent methods.
+
+* find($id, $columns = ['*'])
+* findMany($ids, $columns = ['*'])
+* findOrFail($id, $columns = ['*'])
+* findOrNew($id, $columns = ['*'])
+* firstOrNew(array $attributes, array $values = [])
+* firstOrCreate(array $attributes, array $values = [])
+* updateOrCreate(array $attributes, array $values = [])
+* firstOrFail($columns = ['*'])
+* firstOr($columns = ['*'], $callback = null)
+* all($columns = ['*'])
+* update($model, array $attributes = [], array $options = [])
+* save($model, array $options = [])
+* saveOrFail($model, array $options = [])
+* destroy($ids){
+* delete($model)
+* forceDelete($model)
+
+
 

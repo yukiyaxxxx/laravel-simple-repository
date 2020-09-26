@@ -7,7 +7,7 @@ use Yukiyaxxxx\LaravelSimpleRepository\Eloquent\BaseRepository;
 
 class ExampleRepository extends BaseRepository implements RepositoryInterface
 {
-    public function model()
+    protected function model()
     {
         /**
         * TODO: Setting eloquent model

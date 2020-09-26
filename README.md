@@ -63,6 +63,8 @@ Extends eloquent methods.
 * destroy($ids){
 * delete($model)
 * forceDelete($model)
-
+* create(array $attributes = [])
+* forceCreate(array $attributes)
+* new()
 
 

@@ -4,7 +4,7 @@ namespace Yukiyaxxxx\LaravelSimpleRepository\Eloquent;
 
 abstract class BaseRepository
 {
-    abstract public function model();
+    abstract protected function model();
 
     protected function newQuery()
     {
@@ -110,6 +110,21 @@ abstract class BaseRepository
     public function forceDelete($model)
     {
         return $model->forceDelete();
+    }
+
+    public function create(array $attributes = [])
+    {
+        return $this->newQuery()->create($attributes);
+    }
+
+    public function forceCreate(array $attributes)
+    {
+        return $this->newQuery()->forceCreate($attributes);
+    }
+
+    public function new()
+    {
+        return $this->model();
     }
 
 }

@@ -43,7 +43,7 @@ $exampleRepository = new ExampleRepository();
 $models =  $exampleRepository->getByEmail($email);
 ```
 
-# API
+### API
 
 Extends eloquent methods.
 

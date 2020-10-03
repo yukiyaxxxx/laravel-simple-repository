@@ -8,7 +8,7 @@ Simple repository library on Laravel.
 ### Composer install 
 
 ```
-composer require yukiyaxxxx/laravel-simple-repository
+composer require "yukiyaxxxx/laravel-simple-repository:dev-master"
 ```
 
 ### Example repository

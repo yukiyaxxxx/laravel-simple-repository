@@ -3,7 +3,7 @@
     "description": "Laravel simple eloquent repository.",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {},
     "extra": {
         "laravel": {

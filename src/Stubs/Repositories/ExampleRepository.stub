@@ -2,10 +2,9 @@
 
 namespace App\Repositories;
 
-use Yukiyaxxxx\LaravelSimpleRepository\Contracts\RepositoryInterface;
 use Yukiyaxxxx\LaravelSimpleRepository\Eloquent\BaseRepository;
 
-class ExampleRepository extends BaseRepository implements RepositoryInterface
+class ExampleRepository extends BaseRepository
 {
     protected function model()
     {

@@ -2,7 +2,9 @@
 
 namespace Yukiyaxxxx\LaravelSimpleRepository\Eloquent;
 
-abstract class BaseRepository
+use Yukiyaxxxx\LaravelSimpleRepository\Contracts\RepositoryInterface;
+
+abstract class BaseRepository implements RepositoryInterface
 {
     abstract protected function model();
 
@@ -122,9 +124,16 @@ abstract class BaseRepository
         return $this->newQuery()->forceCreate($attributes);
     }
 
+    /**
+     * Get new eloquent instance.
+     *
+     * @return mixed
+     */
     public function new()
     {
-        return $this->model();
+        $class = get_class($this->model());
+
+        return new $class();
     }
 
 }

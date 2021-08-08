@@ -79,9 +79,9 @@ abstract class BaseRepository implements RepositoryInterface
         return $query->firstOr($columns, $callback);
     }
 
-    public static function all($columns = ['*'])
+    public function all($columns = ['*'])
     {
-        $query = static::query();
+        $query = $this->newQuery();
         return $query->get($columns);
     }
 
@@ -100,8 +100,10 @@ abstract class BaseRepository implements RepositoryInterface
         return $model->saveOrFail($options);
     }
 
-    public static function destroy($ids){
-        return static::destroy($ids);
+    public function destroy($ids){
+        $class = get_class($this->model());
+
+        return $class::destroy($ids);
     }
 
     public function delete($model)
